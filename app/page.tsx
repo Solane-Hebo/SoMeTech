@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -19,7 +20,7 @@ function Navbar() {
 
         <div className="hidden items-center gap-8 text-sm text-white/70 md:flex">
           <a href="#home" className="text-white">Home</a>
-          <a href="#about">About</a>
+          <Link href="/about">About</Link>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a>
