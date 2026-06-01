@@ -5,12 +5,12 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[#050816] text-white">
       <Navbar />
 
-      {/* Hero */}
+     
       <section className="relative flex flex-col items-center justify-center text-center px-6 pt-40 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.18),transparent_45%)]" />
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          {/* Badge */}
+       
           <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m4-4a4 4 0 100-8 4 4 0 000 8z" />
@@ -32,10 +32,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Developer Cards */}
+
       <section className="px-6 md:px-16 pb-10">
         <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-          {/* Card 1 */}
+    
           <div className="rounded-2xl border border-white/5 bg-white/[0.03] p-8 flex flex-col gap-5 hover:border-violet-500/30 transition-colors">
             <div className="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
               <span className="text-blue-400 text-lg font-bold font-mono">&lt;/&gt;</span>
@@ -57,7 +57,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Card 2 */}
+      
           <div className="rounded-2xl border border-white/5 bg-white/[0.03] p-8 flex flex-col gap-5 hover:border-violet-500/30 transition-colors">
             <div className="w-14 h-14 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
               <span className="text-violet-400 text-lg font-bold font-mono">&lt;/&gt;</span>
@@ -81,7 +81,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy Card */}
+ 
       <section className="px-6 md:px-16 pb-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-2xl overflow-hidden p-10 border border-white/5 bg-white/[0.03]">
