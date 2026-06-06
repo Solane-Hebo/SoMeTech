@@ -1,41 +1,17 @@
+import Projects from "@/components/projects";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#050816] text-white">
-      <Navbar />
       <Hero />
+      {/* <Services /> */}
+      {/* <Projects /> */}
     </main>
   );
 }
 
-function Navbar() {
-  return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-xl font-bold tracking-tight">
-          Some<span className="text-violet-400">Teck</span>
-        </a>
-
-        <div className="hidden items-center gap-8 text-sm text-white/70 md:flex">
-          <a href="#home" className="text-white">Home</a>
-          <Link href="/about">About</Link>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <a
-          href="#contact"
-          className="rounded-full bg-violet-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-violet-500"
-        >
-          Get started
-        </a>
-      </nav>
-    </header>
-  );
-}
 
 function Hero() {
   return (

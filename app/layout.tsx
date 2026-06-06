@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Providers from "@/components/providers";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "SomeTeck",
@@ -15,8 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv">
-      <body>
+      <body className="bg-[#050816] text-white">
+           <Navbar />
         <Providers>{children}</Providers>
+          <Footer />
       </body>
     </html>
   );
