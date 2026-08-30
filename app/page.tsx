@@ -1,12 +1,16 @@
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, Headset, TrendingUp, Zap, Handshake} from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#050816] text-white">
       <Navbar />
       <Hero />
-      <Technologies />
+      <BusinessSolutions />
+      {/* <Technologies /> */}
+      <Clients />
+      <WhySomeTech/>
       <Testimonials />
     </main>
   );
@@ -85,31 +89,179 @@ function Hero() {
           </a>
         </div>
 
-        <Stats />
+        {/* <Stats /> */}
       </div>
     </section>
   );
 }
 
-function Stats() {
-  const stats = [
-    { value: "2+", label: "Years experience" },
-    { value: "50+", label: "Projects delivered" },
-    { value: "100%", label: "Satisfied clients" },
-    { value: "24/7", label: "Support" },
+function BusinessSolutions() {
+  const solutions = [
+    {
+      title: "Understand your workflow",
+      text: "We analyze how your business works today and identify opportunities where digital tools can save time and improve efficiency.",
+      icon: "01",
+    },
+    {
+      title: "Build tools around your needs",
+      text: "Instead of forcing your business into existing systems, we create solutions designed around your actual routines.",
+      icon: "02",
+    },
+    {
+      title: "Improve everyday operations",
+      text: "From internal dashboards to customer platforms, we build tools that make daily work simpler and more effective.",
+      icon: "03",
+    },
   ];
 
   return (
-    <div className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-8 md:grid-cols-4">
-      {stats.map((stat) => (
-        <div key={stat.label}>
-          <p className="text-3xl font-bold text-violet-400">{stat.value}</p>
-          <p className="mt-2 text-sm text-white/50">{stat.label}</p>
+    <section className="relative overflow-hidden px-6 py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.10),transparent_50%)]" />
+
+      <div className="relative z-10 mx-auto max-w-7xl">
+
+        <div className="mx-auto max-w-3xl text-center">
+
+          <div className="
+            mx-auto mb-5 inline-flex
+            rounded-full
+            border border-white/10
+            bg-white/5
+            px-4 py-2
+            text-sm
+            text-white/70
+          ">
+            Our Approach
+          </div>
+
+
+          <h2 className="
+            text-4xl 
+            font-extrabold 
+            tracking-tight 
+            md:text-5xl
+          ">
+            How SomeTeck helps businesses{" "}
+            <span className="
+              bg-gradient-to-r
+              from-blue-400
+              via-violet-400
+              to-pink-500
+              bg-clip-text
+              text-transparent
+            ">
+              build smarter tools
+            </span>
+          </h2>
+
+
+          <p className="
+            mx-auto
+            mt-5
+            max-w-2xl
+            text-lg
+            leading-8
+            text-white/50
+          ">
+            We create digital solutions that support real business routines,
+            helping teams work faster, smarter and more efficiently.
+          </p>
+
         </div>
-      ))}
-    </div>
+
+
+        <div className="
+          mt-16
+          grid
+          gap-6
+          md:grid-cols-3
+        ">
+
+          {solutions.map((item) => (
+
+            <div
+              key={item.icon}
+              className="
+                group
+                rounded-2xl
+                border
+                border-white/10
+                bg-white/[0.03]
+                p-8
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:border-violet-500/40
+                hover:bg-white/[0.06]
+              "
+            >
+
+              <div className="
+                flex
+                h-12
+                w-12
+                items-center
+                justify-center
+                rounded-xl
+                bg-gradient-to-r
+                from-blue-500/20
+                to-violet-500/20
+                text-sm
+                font-bold
+                text-violet-300
+              ">
+                {item.icon}
+              </div>
+
+
+              <h3 className="
+                mt-6
+                text-xl
+                font-bold
+                text-white
+              ">
+                {item.title}
+              </h3>
+
+
+              <p className="
+                mt-4
+                text-sm
+                leading-7
+                text-white/50
+              ">
+                {item.text}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+    </section>
   );
 }
+// function Stats() {
+//   const stats = [
+//     { value: "2+", label: "Years experience" },
+//     { value: "50+", label: "Projects delivered" },
+//     { value: "100%", label: "Satisfied clients" },
+//     { value: "24/7", label: "Support" },
+//   ];
+
+//   return (
+//     <div className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-8 md:grid-cols-4">
+//       {stats.map((stat) => (
+//         <div key={stat.label}>
+//           <p className="text-3xl font-bold text-violet-400">{stat.value}</p>
+//           <p className="mt-2 text-sm text-white/50">{stat.label}</p>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
 
 
 const technologies = [
@@ -125,6 +277,21 @@ const technologies = [
   { name: "DevOps", color: "text-blue-400",   icon: "⚙️" },
   { name: "GitHub", color: "text-white",      icon: "🐙" },
   { name: "ASP.NET",color: "text-violet-400", icon: "🔷" },
+];
+
+const clients = [
+  {
+    name: "Brook Skin Care",
+    logo: "/clients/brook-logo.jpeg",
+  },
+  {
+    name: "JBekery",
+    logo: "/clients/bakery logo.png",
+  },
+  {
+    name: "Meracle Aye Lash",
+    logo: "/clients/meracle-logo.jpeg",
+  },
 ];
 
 function Technologies() {
@@ -167,6 +334,174 @@ function Technologies() {
   );
 }
 
+function Clients() {
+  return (
+    <section className="relative py-24 px-6">
+      <div className="mx-auto max-w-7xl">
+
+        <div className="text-center mb-12">
+          <div className="
+            mx-auto mb-4 inline-flex 
+            rounded-full 
+            border border-white/10 
+            bg-white/5 
+            px-4 py-2 
+            text-sm 
+            text-white/70
+          ">
+            Our Clients
+          </div>
+
+          <h2 className="text-4xl font-extrabold md:text-5xl">
+            Trusted by{" "}
+            <span className="
+              bg-gradient-to-r 
+              from-blue-400 
+              via-violet-400 
+              to-pink-500 
+              bg-clip-text 
+              text-transparent
+            ">
+              businesses
+            </span>
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/50">
+            We help companies build modern digital products that create real impact.
+          </p>
+        </div>
+
+
+        <div className="
+          grid 
+          grid-cols-2 
+          gap-6 
+          md:grid-cols-4
+        ">
+          {clients.map((client) => (
+            <div
+              key={client.name}
+              className="
+                group
+                flex
+                h-32
+                items-center
+                justify-center
+                rounded-2xl
+                border
+                border-white/10
+                bg-white/[0.03]
+                p-8
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:border-violet-500/40
+                hover:bg-white/[0.06]
+              "
+            >
+
+              <Image
+                src={client.logo}
+                alt={client.name}
+                width={160}
+                height={80}
+                className="
+                  h-auto
+                  max-h-12
+                  w-auto
+                  opacity-50
+                  grayscale
+                  transition
+                  duration-300
+                  group-hover:opacity-100
+                  group-hover:grayscale-0
+                "
+              />
+
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+const whyPoints = [
+  {
+    title: "Ongoing Support",
+    text: "We maintain and support your website after launch.",
+    icon: Headset,
+  },
+  {
+    title: "Continuous Improvements",
+    text: "We continuously improve your website based on your business needs.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Fast & Reliable",
+    text: "When something needs to be fixed or changed, you have a team you can rely on.",
+    icon: Zap,
+  },
+  {
+    title: "Long-term Partnership",
+    text: "We aim to become your long-term digital partner, not just another development agency.",
+    icon: Handshake,
+  },
+];
+
+function WhySomeTech() {
+  return (
+    <section className="relative overflow-hidden px-6 py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.10),transparent_50%)]" />
+
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
+            Why SomeTeck?
+          </div>
+
+          <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+            More than a website.{" "}
+            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+              A long-term digital partner.
+            </span>
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/50">
+            We don't just build your website and walk away. We stay involved,
+            keep your digital products up to date, improve performance and
+            help your business evolve over time.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {whyPoints.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.title}
+                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-2 hover:border-violet-500/40 hover:bg-white/[0.06]"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500/20 to-violet-500/20 text-violet-300">
+                  <Icon size={22} />
+                </div>
+
+                <h3 className="mt-6 text-xl font-bold text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-7 text-white/50">
+                  {item.text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 const testimonials = [
   {
@@ -179,7 +514,7 @@ const testimonials = [
   },
   {
     name: "Sara Johansson",
-    role: "Founder, GreenLeaf Studio",
+    role: "Founder, JBekery",
     text: "Working with SomeTeck was a game changer for our business. They understood our vision immediately and built exactly what we needed.",
     rating: 5,
     initials: "SJ",

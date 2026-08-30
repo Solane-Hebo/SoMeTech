@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#050816] text-white">
@@ -39,6 +41,80 @@ export default function AboutPage() {
         </div>
       </section>
 
+
+<section className="px-6 pb-20 md:px-16">
+  <div className="mx-auto max-w-7xl">
+
+    <div className="mb-12 text-center">
+      <h2 className="text-4xl font-extrabold md:text-5xl">
+        Meet the{" "}
+        <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+          team
+        </span>
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-xl text-lg text-white/50">
+        Two passionate developers creating modern digital solutions with focus
+        on quality, performance and user experience.
+      </p>
+    </div>
+
+
+    <div className="grid gap-8 md:grid-cols-2">
+
+      {/* Person 1 */}
+      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center transition hover:border-blue-500/30">
+
+        <div className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full border border-white/10">
+          <Image
+            src="/team/person1.jpg"
+            alt="Developer"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold text-white">
+          Solane Sani
+        </h3>
+
+        <p className="mt-4 leading-7 text-white/60">
+          Passionate about building modern digital products and creating
+          scalable solutions that help businesses grow online.
+        </p>
+
+      </div>
+
+
+      {/* Person 2 */}
+      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center transition hover:border-violet-500/30">
+
+        <div className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full border border-white/10">
+          <Image
+            src="/team/person2.jpg"
+            alt="Developer"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        <h3 className="text-2xl font-bold text-white">
+          Meron Beyene
+        </h3>
+
+        <p className="mt-4 leading-7 text-white/60">
+          Focused on delivering clean, reliable and innovative solutions
+          through modern technology and creative thinking.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
       <section className="px-6 pb-12 md:px-16">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
           <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition-all hover:border-blue-500/30">
