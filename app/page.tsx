@@ -27,14 +27,14 @@ function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-white md:text-7xl">
-          Free your team from{" "}
-          time-consuming tasks.
+          We build digital experiences{" "}
+          that grow with your business
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/70">
-          Automate your processes with an app built specifically for your
-          business — one that saves your team time and keeps customers
-          happier.
+          SomeTech is a boutique digital agency focused on frontend and
+          fullstack development. We create fast, modern and high-converting
+          websites and web applications.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -49,7 +49,7 @@ function Hero() {
             href="#portfolio"
             className="rounded-full border border-white/25 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
           >
-            See packages and pricing
+            View our work
           </a>
         </div>
 

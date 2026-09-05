@@ -2,15 +2,15 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#050816] text-white">
+    <main className="min-h-screen bg-[#1C3334] text-white">
       <section className="relative flex flex-col items-center justify-center overflow-hidden px-6 pt-40 pb-20 text-center">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.18),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(55,110,111,0.25),transparent_45%)]" />
 
         <div className="relative z-10 mx-auto max-w-4xl">
           <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 text-violet-400"
+              className="h-4 w-4 text-[#DA7B93]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -23,12 +23,12 @@ export default function AboutPage() {
               />
             </svg>
 
-            About SomeTech
+            About SomeTeck
           </div>
 
           <h1 className="text-5xl font-extrabold leading-tight tracking-tight md:text-7xl">
             We are two{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#376E6F] via-[#DA7B93] to-[#DA7B93] bg-clip-text text-transparent">
               passionate developers
             </span>
           </h1>
@@ -42,13 +42,13 @@ export default function AboutPage() {
       </section>
 
 
-<section className="px-6 pb-20 md:px-16">
+<section className="px-6 pb-20 ">
   <div className="mx-auto max-w-7xl">
 
     <div className="mb-12 text-center">
       <h2 className="text-4xl font-extrabold md:text-5xl">
         Meet the{" "}
-        <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-[#376E6F] via-[#DA7B93] to-[#DA7B93] bg-clip-text text-transparent">
           team
         </span>
       </h2>
@@ -60,10 +60,10 @@ export default function AboutPage() {
     </div>
 
 
-    <div className="grid gap-8 md:grid-cols-2">
+    <div className="flex ">
 
       {/* Person 1 */}
-      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center transition hover:border-blue-500/30">
+      <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 text-center transition hover:border-[#376E6F]/40">
 
         <div className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full border border-white/10">
           <Image
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
 
       {/* Person 2 */}
-      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center transition hover:border-violet-500/30">
+      <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 text-center transition hover:border-[#DA7B93]/40">
 
         <div className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full border border-white/10">
           <Image
@@ -117,9 +117,9 @@ export default function AboutPage() {
 </section>
       <section className="px-6 pb-12 md:px-16">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition-all hover:border-blue-500/30">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
-              <span className="font-mono text-xl font-bold text-blue-400">
+          <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 transition-all hover:border-[#376E6F]/40">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#376E6F]/30 bg-[#376E6F]/10">
+              <span className="font-mono text-xl font-bold text-[#7FB3B4]">
                 &lt;/&gt;
               </span>
             </div>
@@ -148,9 +148,9 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition-all hover:border-violet-500/30">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-violet-500/20 bg-violet-500/10">
-              <span className="font-mono text-xl font-bold text-violet-400">
+          <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 transition-all hover:border-[#DA7B93]/40">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#DA7B93]/30 bg-[#DA7B93]/10">
+              <span className="font-mono text-xl font-bold text-[#DA7B93]">
                 &lt;/&gt;
               </span>
             </div>
@@ -183,9 +183,9 @@ export default function AboutPage() {
 
       <section className="px-6 pb-24 md:px-16">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10">
-            <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-violet-600/20 blur-3xl" />
-            <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-blue-600/20 blur-3xl" />
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#2F4454]/40 p-10">
+            <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#DA7B93]/20 blur-3xl" />
+            <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-[#376E6F]/20 blur-3xl" />
 
             <div className="relative">
               <h2 className="mb-4 text-3xl font-bold">
