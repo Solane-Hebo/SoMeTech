@@ -96,12 +96,12 @@ export default function Contact() {
 
   const inputBase =
     "w-full rounded-xl border bg-white/5 px-4 py-4 outline-none transition placeholder:text-white/30 text-white";
-  const inputNormal = "border-white/10 focus:border-violet-500";
+  const inputNormal = "border-white/10 focus:border-[#DA7B93]";
   const inputError = "border-red-500/70 focus:border-red-500";
 
   return (
-    <section className="relative overflow-hidden bg-[#050816] px-6 pt-40 pb-24 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.18),transparent_45%)]" />
+    <section className="relative overflow-hidden bg-[#1C3334] px-6 pt-40 pb-24 text-white">
+      <ContactBackground />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Hero */}
@@ -111,7 +111,7 @@ export default function Contact() {
           </div>
           <h1 className="text-5xl font-extrabold leading-tight tracking-tight md:text-6xl">
             Let's build something{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#376E6F] via-[#DA7B93] to-[#DA7B93] bg-clip-text text-transparent">
               amazing together
             </span>
           </h1>
@@ -126,9 +126,9 @@ export default function Contact() {
           {/* Email — clickable */}
           <a
             href="mailto:sometech16@gmail.com"
-            className="rounded-2xl border border-white/5 bg-white/[0.03] p-8 transition hover:border-violet-500/30 hover:bg-white/[0.06]"
+            className="rounded-2xl border border-white/10 bg-[#2F4454]/40 p-8 transition hover:border-[#376E6F]/40 hover:bg-[#2F4454]/60"
           >
-            <Mail className="mb-4 text-blue-400" size={28} />
+            <Mail className="mb-4 text-[#7FB3B4]" size={28} />
             <h3 className="text-xl font-bold">Email</h3>
             <p className="mt-3 text-white/60 break-all">sometech16@gmail.com</p>
           </a>
@@ -138,27 +138,27 @@ export default function Contact() {
             href="https://www.google.com/maps/search/Stockholm,+Sweden"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl border border-white/5 bg-white/[0.03] p-8 transition hover:border-violet-500/30 hover:bg-white/[0.06]"
+            className="rounded-2xl border border-white/10 bg-[#2F4454]/40 p-8 transition hover:border-[#DA7B93]/40 hover:bg-[#2F4454]/60"
           >
-            <MapPin className="mb-4 text-violet-400" size={28} />
+            <MapPin className="mb-4 text-[#DA7B93]" size={28} />
             <h3 className="text-xl font-bold">Location</h3>
             <p className="mt-3 text-white/60">Stockholm, Sweden</p>
           </a>
 
           {/* Response time */}
-          <div className="rounded-2xl border border-white/5 bg-white/[0.03] p-8">
-            <Clock3 className="mb-4 text-pink-400" size={28} />
+          <div className="rounded-2xl border border-white/10 bg-[#2F4454]/40 p-8">
+            <Clock3 className="mb-4 text-[#E8A5B8]" size={28} />
             <h3 className="text-xl font-bold">Response Time</h3>
             <p className="mt-3 text-white/60">Within 24 hours</p>
           </div>
         </div>
 
         {/* Form */}
-        <div className="mt-16 rounded-3xl border border-white/5 bg-white/[0.03] p-8 md:p-12">
+        <div className="mt-16 rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 md:p-12">
           {submitted ? (
             <div className="flex flex-col items-center justify-center py-20 text-center">
-              <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-violet-500/10 border border-violet-500/20">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#DA7B93]/10 border border-[#DA7B93]/20">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9 text-[#DA7B93]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -228,7 +228,7 @@ export default function Contact() {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className={`${inputBase} ${errors.projectType ? inputError : inputNormal} bg-[#0B1220]`}
+                    className={`${inputBase} ${errors.projectType ? inputError : inputNormal} bg-[#152829]`}
                   >
                     <option value="">Project Type *</option>
                     <option>Frontend Development</option>
@@ -255,7 +255,7 @@ export default function Contact() {
                   {errors.message
                     ? <p className="text-xs text-red-400">{errors.message}</p>
                     : <span />}
-                  <p className={`text-xs ${formData.message.length < 20 ? "text-white/30" : "text-violet-400"}`}>
+                  <p className={`text-xs ${formData.message.length < 20 ? "text-white/30" : "text-[#DA7B93]"}`}>
                     {formData.message.length} / 20 min
                   </p>
                 </div>
@@ -264,7 +264,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-600 px-8 py-4 font-semibold text-white transition hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-[#376E6F] to-[#DA7B93] px-8 py-4 font-semibold text-white transition hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>
@@ -286,20 +286,39 @@ export default function Contact() {
         </div>
 
         {/* CTA */}
-        <div className="relative mt-20 overflow-hidden rounded-2xl border border-white/5 bg-white/[0.03] p-10 text-center">
-          <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-violet-600/20 blur-3xl" />
-          <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-blue-600/20 blur-3xl" />
+        <div className="relative mt-20 overflow-hidden rounded-2xl border border-white/10 bg-[#2F4454]/40 p-10 text-center">
+          <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#376E6F]/20 blur-3xl" />
+          <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-[#DA7B93]/20 blur-3xl" />
           <div className="relative z-10">
             <h2 className="text-3xl font-bold">Ready to start?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-white/60">
               Let's discuss your project and create something amazing together.
             </p>
-            <button className="mt-8 rounded-full bg-gradient-to-r from-blue-500 to-violet-600 px-8 py-4 font-semibold text-white transition hover:opacity-90">
+            <button className="mt-8 rounded-full bg-gradient-to-r from-[#376E6F] to-[#DA7B93] px-8 py-4 font-semibold text-white transition hover:opacity-90">
               Book a Free Consultation
             </button>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function ContactBackground() {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div
+        className="absolute -top-20 -left-20 h-[60vh] w-[60vh] rounded-full opacity-90"
+        style={{
+          background: "linear-gradient(140deg, #2E151B 0%, #376E6F 70%, #2E151B 100%)",
+        }}
+      />
+      <div
+        className="absolute top-1/4 -right-24 h-[68vh] w-[68vh] rounded-full opacity-95"
+        style={{
+          background: "linear-gradient(155deg, #2E151B 0%, #DA7B93 65%, #2E151B 100%)",
+        }}
+      />
+    </div>
   );
 }

@@ -1,10 +1,37 @@
 import Image from "next/image";
 
+function AboutHeroCircles() {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div
+        className="absolute -top-24 -left-16 h-[38vh] w-[38vh] rounded-full opacity-70 blur-[2px]"
+        style={{
+          background:
+            "linear-gradient(140deg, #2E151B 0%, #376E6F 60%, #2E151B 100%)",
+        }}
+      />
+      <div
+        className="absolute top-10 -right-20 h-[46vh] w-[46vh] rounded-full opacity-80 blur-[2px]"
+        style={{
+          background:
+            "linear-gradient(155deg, #2E151B 0%, #DA7B93 55%, #2E151B 100%)",
+        }}
+      />
+      <div
+        className="absolute bottom-[-10%] left-1/3 h-[28vh] w-[28vh] rounded-full opacity-50 blur-[2px]"
+        style={{
+          background: "linear-gradient(160deg, #376E6F 0%, #2E151B 100%)",
+        }}
+      />
+    </div>
+  );
+}
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#1C3334] text-white">
       <section className="relative flex flex-col items-center justify-center overflow-hidden px-6 pt-40 pb-20 text-center">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(55,110,111,0.25),transparent_45%)]" />
+        <AboutHeroCircles />
 
         <div className="relative z-10 mx-auto max-w-4xl">
           <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
@@ -41,8 +68,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-
-<section className="px-6 pb-20 ">
+      <section className="px-6 pb-20 md:px-16">
   <div className="mx-auto max-w-7xl">
 
     <div className="mb-12 text-center">
@@ -60,7 +86,7 @@ export default function AboutPage() {
     </div>
 
 
-    <div className="flex ">
+    <div className="grid gap-8 md:grid-cols-2">
 
       {/* Person 1 */}
       <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 text-center transition hover:border-[#376E6F]/40">
