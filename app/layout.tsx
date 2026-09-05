@@ -17,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv">
-      <body className="bg-[#050816] text-white">
-           <Navbar />
-        <Providers>{children}</Providers>
-          <Footer />
+      <body className="bg-[#1C3334] text-white">
+            <Navbar />
+            <Providers>{children}</Providers>
+            <Footer />
       </body>
     </html>
   );

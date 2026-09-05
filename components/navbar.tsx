@@ -43,25 +43,25 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed left-1/2 top-6 z-50 w-[92%] max-w-6xl -translate-x-1/2 rounded-full transition-all duration-300 ${
         scrolled
-          ? "border-b border-white/10 bg-[#050816]/95 shadow-lg shadow-black/20 backdrop-blur-md"
-          : "border-b border-transparent bg-[#050816]/80 backdrop-blur"
+          ? "border border-white/10 bg-[#1C3334]/70 shadow-lg shadow-black/30 backdrop-blur-xl"
+          : "border border-white/10 bg-[#1C3334]/40 backdrop-blur-xl"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <nav className="flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link
           href="/"
           className="text-xl font-bold tracking-tight text-white"
           onClick={() => setOpen(false)}
         >
-          Some<span className="text-violet-400">Teck</span>
+          Some<span className="text-[#DA7B93]">Tech</span>
         </Link>
 
         {/* Desktop Nav — JS-controlled visibility */}
         {!isMobile && (
-          <div className="flex items-center gap-8 text-sm">
+          <div className="flex items-center gap-8 text-sm font-medium">
             {NAV_LINKS.map(({ href, label }) => {
               const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
               return (
@@ -70,10 +70,10 @@ export default function Navbar() {
                   href={href}
                   className={`relative transition-colors duration-200
                     after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full
-                    after:origin-left after:scale-x-0 after:bg-violet-400
+                    after:origin-left after:scale-x-0 after:bg-[#DA7B93]
                     after:transition-transform after:duration-200
                     hover:text-white hover:after:scale-x-100
-                    ${isActive ? "text-white after:scale-x-100" : "text-white/60"}`}
+                    ${isActive ? "text-white after:scale-x-100" : "text-white/70"}`}
                 >
                   {label}
                 </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
         {!isMobile && (
           <Link
             href="/contact"
-            className="rounded-full bg-gradient-to-r from-blue-500 to-violet-600 px-6 py-2.5 text-sm font-semibold text-white transition-opacity duration-200 hover:opacity-90 active:scale-95"
+            className="rounded-full bg-gradient-to-r from-[#376E6F] to-[#DA7B93] px-6 py-2.5 text-sm font-semibold text-white transition-opacity duration-200 hover:opacity-90 active:scale-95"
           >
             Get Started
           </Link>
@@ -96,7 +96,7 @@ export default function Navbar() {
         {isMobile && (
           <button
             onClick={() => setOpen((prev) => !prev)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/10 hover:text-white"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
@@ -108,7 +108,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobile && (
         <div
-          className={`absolute left-0 top-full w-full border-t border-white/10 bg-[#050816] backdrop-blur-md transition-all duration-300 ease-in-out ${
+          className={`absolute left-0 top-full mt-2 w-full rounded-3xl border border-white/10 bg-[#1C3334]/95 shadow-lg shadow-black/30 backdrop-blur-xl transition-all duration-300 ease-in-out ${
             open
               ? "pointer-events-auto opacity-100 translate-y-0"
               : "pointer-events-none opacity-0 -translate-y-2"
@@ -124,7 +124,7 @@ export default function Navbar() {
                   href={href}
                   onClick={() => setOpen(false)}
                   className={`border-b border-white/5 py-3.5 text-sm font-medium transition-colors duration-150 last:border-none hover:text-white ${
-                    isActive ? "text-violet-400" : "text-white/60"
+                    isActive ? "text-[#DA7B93]" : "text-white/60"
                   }`}
                 >
                   {label}
@@ -136,7 +136,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="inline-block rounded-full bg-gradient-to-r from-blue-500 to-violet-600 px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                className="inline-block rounded-full bg-gradient-to-r from-[#376E6F] to-[#DA7B93] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Get Started
               </Link>

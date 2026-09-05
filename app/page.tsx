@@ -1,11 +1,11 @@
-import { ArrowRight, Star, Headset, TrendingUp, Zap, Handshake} from "lucide-react";
+import { ArrowRight, Star, Headset, TrendingUp, Zap, Handshake, Mail} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#050816] text-white">
-      <Navbar />
+    <main className="min-h-screen bg-[#1C3334] text-white">
       <Hero />
       <BusinessSolutions />
       {/* <Technologies /> */}
@@ -17,81 +17,66 @@ export default function HomePage() {
 }
 
 
-function Navbar() {
-  return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          Some<span className="text-violet-400">Tech</span>
-        </Link>
-
-        <div className="hidden items-center gap-8 text-sm text-white/70 md:flex">
-          <Link href="/" className="text-white">Home</Link>
-          <Link href="/about" className="hover:text-white transition-colors">About</Link>
-          <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
-          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-        </div>
-
-        <Link
-          href="/contact"
-          className="rounded-full bg-violet-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-violet-500"
-        >
-          Get started
-        </Link>
-      </nav>
-    </header>
-  );
-}
-
-
 function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-24"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0E1717] px-6 pt-24"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.18),transparent_45%)]" />
+      <HeroCircles />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <div className="mx-auto mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
-          Premium web solutions for modern businesses
-        </div>
-
-        <h1 className="text-5xl font-extrabold leading-tight tracking-tight md:text-7xl">
-          We build{" "}
-          <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
-            digital experiences
-          </span>{" "}
-          that grow with your business
+        <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-white md:text-7xl">
+          Free your team from{" "}
+          time-consuming tasks.
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/60">
-          SomeTeck is a boutique digital agency focused on frontend and
-          fullstack development. We create fast, modern and high-converting
-          websites and web applications.
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/70">
+          Automate your processes with an app built specifically for your
+          business — one that saves your team time and keeps customers
+          happier.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-600 px-7 py-3 font-semibold text-white transition hover:opacity-90"
+            className="rounded-full bg-[#DA7B93] px-7 py-3 font-semibold text-[#1C3334] transition hover:bg-[#e491a6]"
           >
-            Start your project
-            <ArrowRight size={18} />
+            Get started
           </Link>
 
           <a
             href="#portfolio"
-            className="rounded-full border border-white/15 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
+            className="rounded-full border border-white/25 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
           >
-            View our work
+            See packages and pricing
           </a>
         </div>
 
         {/* <Stats /> */}
       </div>
     </section>
+  );
+}
+
+function HeroCircles() {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div
+        className="absolute left-[30%] top-1/2 h-[130vh] w-[130vh] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-90"
+        style={{
+          background:
+            "linear-gradient(140deg, #2E151B 0%, #1C3334 55%, #2E151B 100%)",
+        }}
+      />
+      <div
+        className="absolute left-[70%] top-1/2 h-[130vh] w-[130vh] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-95"
+        style={{
+          background:
+            "linear-gradient(155deg, #2E151B 0%, #376E6F 38%, #DA7B93 62%, #2E151B 100%)",
+        }}
+      />
+    </div>
   );
 }
 
@@ -116,7 +101,7 @@ function BusinessSolutions() {
 
   return (
     <section className="relative overflow-hidden px-6 py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.10),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(218,123,147,0.10),transparent_50%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
 
@@ -144,9 +129,9 @@ function BusinessSolutions() {
             How SomeTeck helps businesses{" "}
             <span className="
               bg-gradient-to-r
-              from-blue-400
-              via-violet-400
-              to-pink-500
+              from-[#376E6F]
+              via-[#DA7B93]
+              to-[#DA7B93]
               bg-clip-text
               text-transparent
             ">
@@ -186,13 +171,13 @@ function BusinessSolutions() {
                 rounded-2xl
                 border
                 border-white/10
-                bg-white/[0.03]
+                bg-[#2F4454]/40
                 p-8
                 transition-all
                 duration-300
                 hover:-translate-y-2
-                hover:border-violet-500/40
-                hover:bg-white/[0.06]
+                hover:border-[#DA7B93]/40
+                hover:bg-[#2F4454]/60
               "
             >
 
@@ -204,11 +189,11 @@ function BusinessSolutions() {
                 justify-center
                 rounded-xl
                 bg-gradient-to-r
-                from-blue-500/20
-                to-violet-500/20
+                from-[#376E6F]/30
+                to-[#DA7B93]/30
                 text-sm
                 font-bold
-                text-violet-300
+                text-[#DA7B93]
               ">
                 {item.icon}
               </div>
@@ -255,7 +240,7 @@ function BusinessSolutions() {
 //     <div className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-8 md:grid-cols-4">
 //       {stats.map((stat) => (
 //         <div key={stat.label}>
-//           <p className="text-3xl font-bold text-violet-400">{stat.value}</p>
+//           <p className="text-3xl font-bold text-[#DA7B93]">{stat.value}</p>
 //           <p className="mt-2 text-sm text-white/50">{stat.label}</p>
 //         </div>
 //       ))}
@@ -265,18 +250,18 @@ function BusinessSolutions() {
 
 
 const technologies = [
-  { name: "React",       color: "text-blue-400",   icon: "⚛️" },
-  { name: "Next.js",     color: "text-white",       icon: "▲" },
-  { name: "TypeScript",  color: "text-blue-500",    icon: "TS" },
-  { name: "Tailwind",    color: "text-cyan-400",    icon: "🌊" },
-  { name: "Node.js",     color: "text-green-400",   icon: "🟢" },
-  { name: "MongoDB",     color: "text-green-500",   icon: "🍃" },
-  { name: "PostgreSQL",  color: "text-blue-300",    icon: "🐘" },
-  { name: "Figma",       color: "text-pink-400",    icon: "🎨" },
-  { name: "C#",     color: "text-purple-400", icon: "🟣" },
-  { name: "DevOps", color: "text-blue-400",   icon: "⚙️" },
-  { name: "GitHub", color: "text-white",      icon: "🐙" },
-  { name: "ASP.NET",color: "text-violet-400", icon: "🔷" },
+  { name: "React",       color: "text-[#7FB3B4]",   icon: "⚛️" },
+  { name: "Next.js",     color: "text-white",        icon: "▲" },
+  { name: "TypeScript",  color: "text-[#7FB3B4]",   icon: "TS" },
+  { name: "Tailwind",    color: "text-[#7FB3B4]",   icon: "🌊" },
+  { name: "Node.js",     color: "text-[#DA7B93]",   icon: "🟢" },
+  { name: "MongoDB",     color: "text-[#DA7B93]",   icon: "🍃" },
+  { name: "PostgreSQL",  color: "text-[#B7CBCB]",   icon: "🐘" },
+  { name: "Figma",       color: "text-[#DA7B93]",   icon: "🎨" },
+  { name: "C#",          color: "text-[#E8A5B8]",   icon: "🟣" },
+  { name: "DevOps",      color: "text-[#7FB3B4]",   icon: "⚙️" },
+  { name: "GitHub",      color: "text-white",        icon: "🐙" },
+  { name: "ASP.NET",     color: "text-[#E8A5B8]",   icon: "🔷" },
 ];
 
 const clients = [
@@ -305,7 +290,7 @@ function Technologies() {
           </div>
           <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
             Technologies we{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#376E6F] via-[#DA7B93] to-[#DA7B93] bg-clip-text text-transparent">
               master
             </span>
           </h2>
@@ -320,7 +305,7 @@ function Technologies() {
           {technologies.map((tech) => (
             <div
               key={tech.name}
-              className="flex flex-col items-center gap-3 rounded-2xl border border-white/5 bg-white/[0.03] p-6 transition hover:border-violet-500/30 hover:bg-white/[0.06]"
+              className="flex flex-col items-center gap-3 rounded-2xl border border-white/5 bg-[#2F4454]/40 p-6 transition hover:border-[#DA7B93]/30 hover:bg-[#2F4454]/60"
             >
               <span className="text-3xl">{tech.icon}</span>
               <span className={`text-sm font-semibold ${tech.color}`}>
@@ -356,9 +341,9 @@ function Clients() {
             Trusted by{" "}
             <span className="
               bg-gradient-to-r 
-              from-blue-400 
-              via-violet-400 
-              to-pink-500 
+              from-[#376E6F]
+              via-[#DA7B93]
+              to-[#DA7B93]
               bg-clip-text 
               text-transparent
             ">
@@ -390,13 +375,13 @@ function Clients() {
                 rounded-2xl
                 border
                 border-white/10
-                bg-white/[0.03]
+                bg-[#2F4454]/40
                 p-8
                 transition-all
                 duration-300
                 hover:-translate-y-2
-                hover:border-violet-500/40
-                hover:bg-white/[0.06]
+                hover:border-[#DA7B93]/40
+                hover:bg-[#2F4454]/60
               "
             >
 
@@ -449,11 +434,10 @@ const whyPoints = [
     icon: Handshake,
   },
 ];
-
 function WhySomeTech() {
   return (
-    <section className="relative overflow-hidden px-6 py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.10),transparent_50%)]" />
+    <section className="relative overflow-hidden px-6 py-24 bg-[#2E151B]/30">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(55,110,111,0.12),transparent_50%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
@@ -463,7 +447,7 @@ function WhySomeTech() {
 
           <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
             More than a website.{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#376E6F] via-[#DA7B93] to-[#DA7B93] bg-clip-text text-transparent">
               A long-term digital partner.
             </span>
           </h2>
@@ -475,23 +459,23 @@ function WhySomeTech() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid justify-items-center gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {whyPoints.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-2 hover:border-violet-500/40 hover:bg-white/[0.06]"
+                className="group flex aspect-square w-56 flex-col items-center justify-center rounded-full border border-white/10 bg-[#2F4454]/40 p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#DA7B93]/40 hover:bg-[#2F4454]/60"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500/20 to-violet-500/20 text-violet-300">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-[#376E6F]/30 to-[#DA7B93]/30 text-[#DA7B93]">
                   <Icon size={22} />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-white">
+                <h3 className="mt-4 text-base font-bold text-white">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-7 text-white/50">
+                <p className="mt-2 text-xs leading-5 text-white/50">
                   {item.text}
                 </p>
               </div>
@@ -503,6 +487,7 @@ function WhySomeTech() {
   );
 }
 
+
 const testimonials = [
   {
     name: "Brook Teshome",
@@ -510,7 +495,7 @@ const testimonials = [
     text: "SomeTeck delivered our platform ahead of schedule and exceeded every expectation. The code quality and attention to detail was outstanding.",
     rating: 5,
     initials: "EL",
-    color: "bg-blue-500/20 text-blue-400",
+    color: "bg-[#376E6F]/20 text-[#7FB3B4]",
   },
   {
     name: "Sara Johansson",
@@ -518,7 +503,7 @@ const testimonials = [
     text: "Working with SomeTeck was a game changer for our business. They understood our vision immediately and built exactly what we needed.",
     rating: 5,
     initials: "SJ",
-    color: "bg-violet-500/20 text-violet-400",
+    color: "bg-[#DA7B93]/20 text-[#DA7B93]",
   },
   {
     name: "Liya Kbede",
@@ -526,7 +511,7 @@ const testimonials = [
     text: "Incredibly professional team. They handled complex fullstack requirements with ease and were always available for questions.",
     rating: 5,
     initials: "MA",
-    color: "bg-pink-500/20 text-pink-400",
+    color: "bg-[#2E151B]/40 text-[#E8A5B8]",
   },
 ];
 
@@ -534,7 +519,7 @@ function Testimonials() {
   return (
     <section className="relative overflow-hidden py-24 px-6">
       {/* Background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(124,58,237,0.10),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(55,110,111,0.12),transparent_60%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header */}
@@ -544,7 +529,7 @@ function Testimonials() {
           </div>
           <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
             What our{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#376E6F] via-[#DA7B93] to-[#DA7B93] bg-clip-text text-transparent">
               clients say
             </span>
           </h2>
@@ -558,12 +543,12 @@ function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col gap-6 rounded-2xl border border-white/5 bg-white/[0.03] p-8 transition hover:border-violet-500/30"
+              className="flex flex-col gap-6 rounded-2xl border border-white/5 bg-[#2F4454]/30 p-8 transition hover:border-[#DA7B93]/30"
             >
               {/* Stars */}
               <div className="flex gap-1">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} size={16} className="fill-violet-400 text-violet-400" />
+                  <Star key={i} size={16} className="fill-[#DA7B93] text-[#DA7B93]" />
                 ))}
               </div>
 
@@ -590,7 +575,7 @@ function Testimonials() {
         <div className="mt-16 text-center">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-600 px-8 py-4 font-semibold text-white transition hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#376E6F] to-[#DA7B93] px-8 py-4 font-semibold text-white transition hover:opacity-90"
           >
             Start your project
             <ArrowRight size={18} />
@@ -600,3 +585,5 @@ function Testimonials() {
     </section>
   );
 }
+
+
