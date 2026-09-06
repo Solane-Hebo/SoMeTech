@@ -29,7 +29,7 @@ function Navbar() {
           <Link href="/" className="text-white">Home</Link>
           <Link href="/about" className="hover:text-white transition-colors">About</Link>
           <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
+          {/* <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a> */}
           <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
         </div>
 
@@ -81,12 +81,12 @@ function Hero() {
             <ArrowRight size={18} />
           </Link>
 
-          <a
+          {/* <a
             href="#portfolio"
             className="rounded-full border border-white/15 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
           >
             View our work
-          </a>
+          </a> */}
         </div>
 
         {/* <Stats /> */}
