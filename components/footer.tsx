@@ -17,7 +17,7 @@ function LinkedinIcon({ size = 16 }: { size?: number }) {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#2F4454] px-6 pt-20 pb-10">
+    <footer className="relative overflow-hidden border-t border-white/5  bg-[#243A41] px-6 pt-20 pb-10">
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Pre-footer CTA banner */}
         <div className="mb-20 flex flex-col items-center gap-6 text-center">
@@ -40,10 +40,10 @@ export default function Footer() {
         <div className="grid gap-12 border-t border-white/10 pt-12 md:grid-cols-3">
           <div className="md:col-span-1">
             <Link href="/" className="text-xl font-bold tracking-tight">
-              Some<span className="text-[#DA7B93]">Teck</span>
+              Some<span className="text-[#DA7B93]">Tech</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-6 text-white/60">
-              SomeTeck combines technical craft and problem-solving to build
+              SomeTech combines technical craft and problem-solving to build
               digital products that support the business, create structure
               and win back time.
             </p>
@@ -63,12 +63,12 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white/70">Contact</h3>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/60">
-              <a href="mailto:hello@someteck.dev" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+              <a href="mailto:hello@sometech.dev" className="inline-flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={16} />
-                hello@someteck.dev
+                hello@sometech.dev
               </a>
               <a
-                href="https://www.linkedin.com/company/someteck/"
+                href="https://www.linkedin.com/company/sometech/"
                 className="inline-flex items-center gap-2 hover:text-white transition-colors"
               >
                 <LinkedinIcon size={16} />
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row">
-          <p>© 2026 SomeTeck. All rights reserved.</p>
+          <p>© 2026 SomeTech. All rights reserved.</p>
           <p>Built with care.</p>
         </div>
       </div>

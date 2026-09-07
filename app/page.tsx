@@ -126,7 +126,7 @@ function BusinessSolutions() {
             tracking-tight 
             md:text-5xl
           ">
-            How SomeTeck helps businesses{" "}
+            How SomeTech helps businesses{" "}
             <span className="
               bg-gradient-to-r
               from-[#376E6F]
@@ -492,7 +492,7 @@ const testimonials = [
   {
     name: "Brook Teshome",
     role: "CEO, Brook Skin Care",
-    text: "SomeTeck delivered our platform ahead of schedule and exceeded every expectation. The code quality and attention to detail was outstanding.",
+    text: "SomeTech delivered our platform ahead of schedule and exceeded every expectation. The code quality and attention to detail was outstanding.",
     rating: 5,
     initials: "EL",
     color: "bg-[#376E6F]/20 text-[#7FB3B4]",
@@ -500,13 +500,13 @@ const testimonials = [
   {
     name: "Sara Johansson",
     role: "Founder, JBekery",
-    text: "Working with SomeTeck was a game changer for our business. They understood our vision immediately and built exactly what we needed.",
+    text: "Working with SomeTech was a game changer for our business. They understood our vision immediately and built exactly what we needed.",
     rating: 5,
     initials: "SJ",
     color: "bg-[#DA7B93]/20 text-[#DA7B93]",
   },
   {
-    name: "Liya Kbede",
+    name: "Liya Kebede",
     role: "CTO, FinFlow",
     text: "Incredibly professional team. They handled complex fullstack requirements with ease and were always available for questions.",
     rating: 5,
