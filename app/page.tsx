@@ -45,12 +45,12 @@ function Hero() {
             Get started
           </Link>
 
-          <a
+          {/* <a
             href="#portfolio"
             className="rounded-full border border-white/25 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
           >
             View our work
-          </a>
+          </a> */}
         </div>
 
         {/* <Stats /> */}

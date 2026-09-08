@@ -26,13 +26,13 @@ export default async function ProjectPage({
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(124,58,237,0.18),transparent_45%)]" />
 
         <div className="relative z-10 mx-auto max-w-7xl">
-          <Link
+          {/* <Link
             href="/portfolio"
             className="mb-10 inline-flex items-center gap-2 text-sm text-white/60 transition hover:text-white"
           >
             <ArrowLeft size={18} />
             Back to Portfolio
-          </Link>
+          </Link> */}
 
           <div className="max-w-4xl">
             <p className="text-sm font-medium text-violet-400">
