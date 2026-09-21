@@ -361,49 +361,49 @@ function Clients() {
           grid 
           grid-cols-2 
           gap-6 
-          md:grid-cols-4
+          md:grid-sm:grid-cols-2 lg:grid-cols-3
         ">
           {clients.map((client) => (
-            <div
-              key={client.name}
-              className="
-                group
-                flex
-                h-32
-                items-center
-                justify-center
-                rounded-2xl
-                border
-                border-white/10
-                bg-[#2F4454]/40
-                p-8
-                transition-all
-                duration-300
-                hover:-translate-y-2
-                hover:border-[#DA7B93]/40
-                hover:bg-[#2F4454]/60
-              "
-            >
-
-              <Image
-                src={client.logo}
-                alt={client.name}
-                width={160}
-                height={80}
-                className="
-                  h-auto
-                  max-h-12
-                  w-auto
-                  opacity-50
-                  grayscale
-                  transition
-                  duration-300
-                  group-hover:opacity-100
-                  group-hover:grayscale-0
-                "
-              />
-
-            </div>
+          <div
+           key={client.name}
+           className="
+           group
+           flex
+           h-40
+    items-center
+    justify-center
+    rounded-2xl
+    border
+    border-white/10
+    bg-[#2F4454]/40
+    p-6
+    transition-all
+    duration-300
+    hover:-translate-y-2
+    hover:border-[#DA7B93]/40
+    hover:bg-[#2F4454]/60
+  "
+>
+  <Image
+    src={client.logo}
+    alt={client.name}
+    width={300}
+    height={150}
+    className="
+      max-h-20
+      max-w-[80%]
+      w-auto
+      h-auto
+      object-contain
+      opacity-50
+      grayscale
+      transition
+      duration-300
+      group-hover:opacity-100
+      group-hover:grayscale-0
+    "
+  />
+</div>
           ))}
         </div>
 
