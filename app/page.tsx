@@ -271,11 +271,11 @@ const clients = [
   },
   {
     name: "JBekery",
-    logo: "/clients/bakery logo.png",
+    logo: "/clients/bakery logo.jpeg",
   },
   {
     name: "Meracle Aye Lash",
-    logo: "/clients/meracle-logo.jpeg",
+    logo: "/clients/miracle-logo.jpeg",
   },
 ];
 

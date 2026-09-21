@@ -91,9 +91,9 @@ export default function AboutPage() {
       {/* Person 1 */}
       <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 text-center transition hover:border-[#376E6F]/40">
 
-        <div className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full border border-white/10">
+        <div className="mx-auto mb-6 h-70 w-40 overflow-hidden rounded-full border border-white/10">
           <Image
-            src="/team/person1.jpg"
+            src="/clients/Solane.jpeg"
             alt="Developer"
             width={300}
             height={300}
@@ -104,6 +104,10 @@ export default function AboutPage() {
         <h3 className="text-2xl font-bold text-white">
           Solane Sani
         </h3>
+        <p className="text-xl font-bold text-white/40">
+          Software Developer
+        </p>
+
 
         <p className="mt-4 leading-7 text-white/60">
           Passionate about building modern digital products and creating
@@ -116,9 +120,9 @@ export default function AboutPage() {
       {/* Person 2 */}
       <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 text-center transition hover:border-[#DA7B93]/40">
 
-        <div className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full border border-white/10">
+        <div className="mx-auto mb-6 h-70 w-40 overflow-hidden rounded-full border border-white/10">
           <Image
-            src="/team/person2.jpg"
+            src="/clients/Meron.jpeg"
             alt="Developer"
             width={300}
             height={300}
@@ -129,6 +133,10 @@ export default function AboutPage() {
         <h3 className="text-2xl font-bold text-white">
           Meron Beyene
         </h3>
+
+         <p className="text-xl font-bold text-white/40">
+          Software Developer
+        </p>
 
         <p className="mt-4 leading-7 text-white/60">
           Focused on delivering clean, reliable and innovative solutions
@@ -141,7 +149,7 @@ export default function AboutPage() {
 
   </div>
 </section>
-      <section className="px-6 pb-12 md:px-16">
+      {/* <section className="px-6 pb-12 md:px-16">
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
           <div className="rounded-3xl border border-white/10 bg-[#2F4454]/40 p-8 transition-all hover:border-[#376E6F]/40">
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#376E6F]/30 bg-[#376E6F]/10">
@@ -205,7 +213,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="px-6 pb-24 md:px-16">
         <div className="mx-auto max-w-7xl">
